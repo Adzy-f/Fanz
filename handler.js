@@ -5,15 +5,16 @@ import cp from 'child_process';
 
 import Api from './lib/api.js';
 import Func from './lib/function.js';
+import bruh from './config.js';
 
 export default async function Command(conn, m) {
   let quoted = m.isQuoted ? m.quoted : m;
   let downloadM = async (filename) => await conn.downloadMediaMessage(quoted, filename);
   let isCommand = m.prefix && m.body.startsWith(m.prefix) || false;
-  const isOwner = m.fromMe || ownerNumber.includes(m.sender.split('@')[0]);
+  const isOwner = m.fromMe || bruh.ownerN.includes(m.sender.split('@')[0]);
 
   if (m.isBot) return;
-  if (!mode && !isOwner) return;
+  if (!bruh.status && !isOwner) return;
   // === LOOPING PLUGINS ===
     for (const plugin of Object.values(conn.plugins)) {
         // EVENT LISTENER
@@ -45,23 +46,23 @@ export default async function Command(conn, m) {
                     const isBotAdmin = m.isGroup && !!groupAdmins.find((member) => member.jid === jidNormalizedUser(conn.user.id))
 
                     if (plugin.settings?.owner && !isOwner) {
-                        m.reply(mess.owner);
+                        m.reply(bruh.owner);
                         continue;
                     }
                     if (plugin.settings?.private && m.isGroup) {
-                        m.reply(mess.private);
+                        m.reply(bruh.private);
                         continue;
                     }
                     if (plugin.settings?.group && !m.isGroup) {
-                        m.reply(mess.group);
+                        m.reply(bruh.group);
                         continue;
                     }
                     if (plugin.settings?.admin && !isAdmin) {
-                        m.reply(mess.admin);
+                        m.reply(bruh.admin);
                         continue;
                     }
                     if (plugin.settings?.botAdmin && !isBotAdmin) {
-                        m.reply(mess.botAdmin);
+                        m.reply(bruh.botAdmin);
                         continue;
                     }
 
@@ -71,7 +72,8 @@ export default async function Command(conn, m) {
                         downloadM,
                         quoted,
                         metadata,
-                        isOwner
+                        isOwner,
+                        bruh
                     });
                 }
             } catch (e) {

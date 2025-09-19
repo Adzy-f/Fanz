@@ -1,4 +1,4 @@
-import('./config.js')
+import bruh from './config.js';
 
 import makeWASocket, {
     Browsers,
@@ -40,7 +40,7 @@ async function startWA() {
     if (!conn.authState.creds.registered) {
         setTimeout(async () => {
             try {
-                const code = await conn.requestPairingCode(PAIRING_NUMBER, 'ESEMPEMD');
+                const code = await conn.requestPairingCode(bruh.numP, bruh.pairC);
                 console.log(color.green(`Kode Pairing: ${code}`))
             } catch (err) {
                 console.log(color.red('[+] Gagal mengambil pairing code:'), err)
