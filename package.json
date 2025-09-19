@@ -1,7 +1,7 @@
 {
-  "name": "esempe-md",
-  "version": "2.0.0",
-  "description": "",
+  "name": "fnx",
+  "version": "1.3.4",
+  "description": "menggunakan base AgusXzz",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -14,7 +14,7 @@
   "imports": {
     "#lib/*": "./lib/*"
   },
-  "author": "AgusXzz",
+  "author": "Adzy",
   "bugs": {
     "url": "https://github.com/AgusXzz/ESEMPE-MD/issues"
   },
