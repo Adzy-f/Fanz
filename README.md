@@ -1,15 +1,14 @@
-# ESEMPE-MD
+# FnzBot
 
-![ESEMPE-MD Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaK3_60MiEWpItg8BbrvcF4Be_vgIDd8Ggj13AYkPqGdUosLSmCMCtGSY&s=10)
+![Banner](https://files.catbox.moe/oj4f9s.png)
 
-ESEMPE-MD adalah bot WhatsApp Multi-Device yang sederhana dan ringan.
+Fnz adalah bot WhatsApp Multi-Device yang sederhana dan ringan.
 
 ---
 
 ## Ringkasan singkat
 - Bahasa: JavaScript / Node.js
 - Fokus: stabilitas dan kemudahan penggunaan
-
 ---
 
 ## Persyaratan
@@ -22,8 +21,8 @@ ESEMPE-MD adalah bot WhatsApp Multi-Device yang sederhana dan ringan.
 ## Instalasi & Menjalankan
 1. Clone repository
    ```bash
-   git clone https://github.com/AgusXzz/ESEMPE-MD
-   cd ESEMPE-MD
+   git clone https://github.com/AdzMd/fnzBot
+   cd fnzBot
    ```
 
 2. Install dependensi
@@ -35,7 +34,7 @@ ESEMPE-MD adalah bot WhatsApp Multi-Device yang sederhana dan ringan.
 
 3. Jalankan bot
    ```bash
-   npm start
+   npm run fanzbot
    ```
 
 4. Masukkan Code Pairing
@@ -44,23 +43,78 @@ ESEMPE-MD adalah bot WhatsApp Multi-Device yang sederhana dan ringan.
 ---
 
 ## Struktur direktori (contoh)
+```txt
+fanzBot/
+├─ Fanz/
+｜  ├ ai
+｜  ├ dev
+｜  ├ downloader
+｜  ├ fun
+｜  ├ info
+｜  ├ tools
+｜  └ utility
+├─ lib/
+｜  ├ api.js
+｜  ├ color.js    
+｜  ├ exif.js    
+｜  ├ loadPlugins.js    
+｜  ├ pungsi.js    
+｜  └ serialize.js  
+├─ fnz.js
+├─ config.js
+├─ index.js
+├─ package.json
+└─ README.md
 ```
-ESEMPE-MD/
-├── lib
-│ ├── api.js
-│ ├── color.js
-│ ├── exif.js
-│ ├── function.js
-│ ├── loadPlugins.js
-│ └── serialize.js
-├── plugins
-│ ├── downloader
-│ ├── tools
-│ └── utility
-├── config.js
-├── handler.js
-├── index.js
-├── package.json
+
+---
+
+## Cara nambah fitur
+
+```js
+export default {
+   name: "namafitur",
+   category: "category",
+   command: ["cmd", "cmdd"],
+   run: async (conn, m, { optional kalo ada yang mau di import dari handler.js => {
+   /**
+     Disini code mu taro ya puh
+     **/
+   }
+}
+
+// contoh 
+export default {
+    name: "ping",
+    category: "utility",
+    command: ["ping"],
+    run: async (conn, m) => {
+        const start = performance.now();
+        m.reply(`Pong! ${(performance.now() - start).toFixed(2)} ms`);
+    }
+} 
+```
+
+## Config.js
+
+```js
+export default {
+    numP: 62, // no bot
+    dev: [{
+        jid: '62',
+        name: 'ma'
+    }],
+    owner: ["62"], // edit owner di sini
+    status: true, //publik (false, //self)
+    botN: "Fanz-bot",
+    botF: "Fnz",
+    version: "v1.3.3-beta",
+    view: "https://files.catbox.moe/oj4f9s.png",
+    url: "https://github.com/AdzMd",
+    pack: "Fanzbot",
+    auth: "by adi"
+    // pairC: "FANZZBOT" pke bail v6 aja lah dulu v7 masi ng bug klo nak pkek pakek lah
+}
 ```
 
 ---
@@ -76,18 +130,17 @@ Untuk perubahan fitur besar, buka issue dulu supaya dibahas.
 
 ---
 
-## Kontak
-Owner / Maintainer: AgusXzz  
-Repo: https://github.com/AgusXzz/ESEMPE-MD
-
-## Thanks To
-[![Dika Ardnt](https://github.com/DikaArdnt.png?size=100)](https://github.com/DikaArdnt)
-[![WhiskeySockets](https://github.com/WhiskeySockets.png?size=100)](https://github.com/WhiskeySockets/Baileys)
-
-## Contributor
-[![Agus](https://github.com/AgusXzz.png?size=100)](https://github.com/AgusXzz)
-[![Senn](https://github.com/purrbits.png?size=100)](https://github.com/purrbits)
+## Lisensi
+MIT — lihat file LICENSE di repo.
 
 ---
-Terima kasih sudah menggunakan ESEMPE-MD!
-# CROTED BY EY AY
+
+## Kontak Devloper base
+Owner / Maintainer: AgusXzz  
+Repo: [AgusXzz](https://github.com/AgusXzz/ESEMPE-MD)
+
+## Kontak Devloper fnzBot
+Github: [me](https://github.com/AdzMd)
+Kontrib: AguzXzz
+
+Terima kasih sudah menggunakan fnz!
