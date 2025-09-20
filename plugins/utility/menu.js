@@ -18,22 +18,22 @@ export default {
       if (!behh) {
          menu += `Hai 👋 ${m.pushname} ini daftar menu yg tersedia:\n\n`
          for (let category of Object.keys(grouped)) {
-            menu += `> ${category}\n`
+            menu += `> ${category || "Undefined"}\n`
          }
-         menu += '\nKetik *.menu <kategori> untuk menampilkan menu *\n'
+         menu += '\nKetik *.menu <kategori>* untuk menampilkan menu\n'
          menu += 'Ketik *.menu all* untuk semua menu\n'
       } else if (behh === "all") {
          for (let [category, items] of Object.entries(grouped)) {
-            menu += `# ${category.toUpperCase()}\n`;
+            menu += `-> ${category.toUpperCase() || "Undefined"} <-\n`;
             for (let item of items) {
-               menu += `> ${m.prefix}${item.name}\n`;
+               menu += `=> ${m.prefix}${item.name || "Undefined"}\n`;
             }
-            menu += "\n";
+            menu += "\n\n> Powered by Dzyy";
          }
       } else if (grouped[behh]) {
          menu += `${behh.toUpperCase()} | MENU\n`
          for (let item of grouped[behh]) {
-            menu += `> ${m.prefix}${item.name}\n`
+            menu += `-> ${m.prefix}${item.name || "Undefined"}\n\n> Powered By Dzyy`
          }
       } else {
          return m.reply("Apaan itu bang ga tersedia di kategori 😅")
