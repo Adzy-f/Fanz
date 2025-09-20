@@ -1,5 +1,5 @@
 export default {
-   nama: "toqr",
+   name: "toqr",
    category: "tools",
    command: ["toqr", "toqris"],
    run: async (conn, m, {
