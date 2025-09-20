@@ -8,6 +8,7 @@ export default {
 
       let grouped = {};
       for (let plugin of plugins) {
+         if (!plugin || !plugin.name || !plugin.category) continue; // skip yg ga valid
          if (!grouped[plugin.category]) grouped[plugin.category] = [];
          grouped[plugin.category].push(plugin);
       }
@@ -15,7 +16,7 @@ export default {
       let behh = m.args[0] ? m.args[0].toLowerCase() : null
       let menu = "";
       if (!behh) {
-      menu += `Hai 👋 ${m.pushname} ini daftar menu yg tersedia:\n\n` 
+         menu += `Hai 👋 ${m.pushname} ini daftar menu yg tersedia:\n\n`
          for (let category of Object.keys(grouped)) {
             menu += `> ${category}\n`
          }
@@ -32,7 +33,7 @@ export default {
       } else if (grouped[behh]) {
          menu += `${behh.toUpperCase()} | MENU\n`
          for (let item of grouped[behh]) {
-            menu += `> ${m.prefix}${item.name}`
+            menu += `> ${m.prefix}${item.name}\n`
          }
       } else {
          return m.reply("Apaan itu bang ga tersedia di kategori 😅")
