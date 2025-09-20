@@ -24,19 +24,19 @@ export default {
          menu += 'Ketik *.menu all* untuk semua menu\n'
       } else if (behh === "all") {
          for (let [category, items] of Object.entries(grouped)) {
-            menu += `-> ${category.toUpperCase() || "Undefined"} <-\n`;
+            menu += `-> ${category.toUpperCase() || "Undefined"} <-\n-------------------------------\n`;
             for (let item of items) {
-               menu += `=> ${m.prefix}${item.name || "Undefined"}\n`;
+               menu += `> ${m.prefix}${item.name || "Undefined"}\n`;
             }
             menu += "\n"
          }
-         menu += "\n\n> Powered by Dzyy";
+         menu += "\n\n<!> Powered by Dzyy";
       } else if (grouped[behh]) {
-         menu += `${behh.toUpperCase()} | MENU\n`
+         menu += `-> ${behh.toUpperCase()} <-\n`
          for (let item of grouped[behh]) {
-            menu += `-> ${m.prefix}${item.name || "Undefined"}\n`
+            menu += `> ${m.prefix}${item.name || "Undefined"}\n`
          }
-         menu += "\n> Powered By Dzyy"
+         menu += "\n<!> Powered By Dzyy"
       } else {
          return m.reply("Apaan itu bang ga tersedia di kategori 😅")
       }
