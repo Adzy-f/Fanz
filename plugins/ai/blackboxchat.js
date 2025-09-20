@@ -1,5 +1,5 @@
 export default {
-    nama: "blackboxchat",
+    name: "blackboxchat",
     category: "ai",
     command: ["blackboxchat", "bbc"],
     run: async (conn, m, {

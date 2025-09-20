@@ -1,5 +1,5 @@
 export default {
-    nama: "webpilot",
+    name: "webpilot",
     category: "ai",
     command: ["webpilot"],
     run: async (conn, m, {

@@ -1,5 +1,5 @@
 export default {
-    nama: "deepai",
+    name: "deepai",
     category: "ai",
     command: ["deepai", "deep"],
     run: async (conn, m, {

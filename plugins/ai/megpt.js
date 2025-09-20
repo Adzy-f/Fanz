@@ -1,5 +1,5 @@
 export default {
-    nama: "megpt",
+    name: "megpt",
     category: "ai",
     command: ["megpt"],
     run: async (conn, m, {
