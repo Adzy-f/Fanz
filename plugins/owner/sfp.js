@@ -11,7 +11,7 @@ export default {
         if (!m.text) return m.reply(`Nama filenya??\nContoh: ${m.cmd} folder/namafile`);
         if (!quoted.text) return m.reply(`balas pesan nya!`)
         let path = './plugins/' + m.text + '.js'
-        await fs.writeFileSync(path, m.quoted.text)
+        await fs.writeFileSync(path, m.quoted.body)
         m.reply(`tersimpan di ${path}`)
     }
 }
