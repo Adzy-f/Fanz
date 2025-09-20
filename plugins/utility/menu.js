@@ -28,14 +28,16 @@ export default {
             for (let item of items) {
                menu += `> ${m.prefix}${item.name || "Undefined"}\n`;
             }
+            menu += "-------------------------------\n"
             menu += "\n"
          }
          menu += "\n\n<!> Powered by Dzyy";
       } else if (grouped[behh]) {
-         menu += `-> ${behh.toUpperCase()} <-\n`
+         menu += `-> ${behh.toUpperCase()} <-\n-------------------------------\n`
          for (let item of grouped[behh]) {
             menu += `> ${m.prefix}${item.name || "Undefined"}\n`
          }
+         menu += "-------------------------------\n"
          menu += "\n<!> Powered By Dzyy"
       } else {
          return m.reply("Apaan itu bang ga tersedia di kategori 😅")
