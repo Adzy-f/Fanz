@@ -1,10 +1,12 @@
+import pkg from "./package.json" assert { type: "json" }
+
 export default {
     numP: 962796121703, // no bot
     ownerN: ["962796171203"], // edit owner di sini
     status: false, //self
     botN: "Fanz-bot",
     botF: "Fnz",
-    version: "v1.3.8",
+    version: pkg.version,
     pack: "Fanzbot",
     auth: "by adi",
     wait: 'Harap Tunggu sebentar',
