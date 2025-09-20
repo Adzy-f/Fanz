@@ -1,15 +1,13 @@
 export default {
-    nama: "hapus",
-    category: "owner",
-    command: ["hapus", "del"],
-    settings: {
+   nama: "hapus",
+   category: "owner",
+   command: ["hapus", "del"],
+   settings: {
       owner: true
-    },
-    run: async (m) => {
-     if (quoted) {
-       m.delet(m.quoted)
-     } else {
-       m.reply("Not Found ${m.quoted}")
-     }
-    }
+   },
+   run: async (conn, m) => {
+      if (!m.quoted) return m.reply("Hehe ga bisa")
+      m.delet(m.quoted)
+      await m.reactm.chat, ("😅")
+   }
 };
