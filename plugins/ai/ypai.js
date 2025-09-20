@@ -6,12 +6,11 @@ export default {
       Func,
       quoted
    }) => {
-      if (m.text && quoted?.body) {
-         let apikey = await Func.fetchJson(`https://api.yupra.my.id/api/ai/ypai?text=${encodeURIComponent(m.text || quoted?.body)}`);
-         let pesan = apikey.result;
-         m.reply(pesan)
-      } else {
-         m.reply("Nanya apa lo?")
-         }
-      }
+      if (!m.text && !quoted?.body) return m.reply("Nanya apa lo?");
+      await m.react(m.chat, "🤪")
+      let apikey = await Func.fetchJson(`https://api.yupra.my.id/api/ai/ypai?text=${encodeURIComponent(m.text || quoted?.body)}`);
+      let pesan = apikey.result;
+      m.reply(pesan)
+      await m.react(m.chat, "✅")
    }
+}
