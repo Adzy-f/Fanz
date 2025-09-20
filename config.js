@@ -4,7 +4,7 @@ export default {
     status: false, //self
     botN: "Fanz-bot",
     botF: "Fnz",
-    version: "v1.3.3",
+    version: "v1.3.8",
     pack: "Fanzbot",
     auth: "by adi",
     wait: 'Harap Tunggu sebentar',
