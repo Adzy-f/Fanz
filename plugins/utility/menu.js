@@ -28,8 +28,9 @@ export default {
             for (let item of items) {
                menu += `=> ${m.prefix}${item.name || "Undefined"}\n`;
             }
-            menu += "\n\n> Powered by Dzyy";
+            menu += "\n"
          }
+         menu += "\n\n> Powered by Dzyy";
       } else if (grouped[behh]) {
          menu += `${behh.toUpperCase()} | MENU\n`
          for (let item of grouped[behh]) {
