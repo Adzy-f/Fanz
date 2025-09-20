@@ -1,5 +1,5 @@
 export default {
-   nama: "hapus",
+   name: "hapus",
    category: "owner",
    command: ["hapus", "del"],
    settings: {
