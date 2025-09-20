@@ -4,7 +4,7 @@ export default {
     command: ["sc", "script"],
     run: async (conn, m, { Func }) => {
         try {
-            const res = await Func.fetchJson("https://api.github.com/repos/AgusXzz/ESEMPE-MD");
+            const res = await Func.fetchJson("https://api.github.com/repos/Adzy-f/Fanz");
 
             m.reply(`*Informasi Script*\n
 ✨ *Nama:* ${res.name}
