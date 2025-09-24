@@ -4,7 +4,7 @@ export default {
   command: "status",
   settings: {
     owner: true
-  }
+  },
   run: async (conn, m, {
     bruh
   }) => {
