@@ -1,6 +1,6 @@
 export default {
    name: "news",
-   category: "info",
+   category: "berita",
    command: ["news"],
    run: async (conn, m, {
       Api

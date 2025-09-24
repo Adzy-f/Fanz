@@ -4,7 +4,7 @@ FanzCode();
 
 export default {
    name: "cnn",
-   category: "info",
+   category: "berita",
    command: ["cnn"],
    run: async (conn, m, {
       Func,
