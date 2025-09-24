@@ -3,7 +3,8 @@ export default {
    category: "utility",
    command: ["menu", "start"],
    run: async (conn, m, {
-      bruh
+      bruh,
+      Func
    }) => {
 
       let plugins = Object.values(conn.plugins);
