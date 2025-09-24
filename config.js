@@ -1,11 +1,13 @@
-import pkg from "./package.json" assert { type: "json" }
+import { readFileSync } from "fs";
+
+const pkg = JSON.parse(readFileSync("./package.json", "utf-8"));
 
 export default {
     numP: 962796121703, // no bot
     ownerN: ["962796171203"], // edit owner di sini
     status: false, //self
-    botN: "Fanz-bot",
-    botF: "Fnz",
+    botN: pkg.name,
+    botF: pkg.nickname,
     version: pkg.version,
     pack: "Sticker by Fanz",
     auth: "Auhtor nya Adi",
