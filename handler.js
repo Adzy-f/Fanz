@@ -33,7 +33,8 @@ export default async function Command(conn, m) {
       metadata,
       isOwner,
       isAdmin,
-      isBotAdmin
+      isBotAdmin,
+      bruh
    }
    // === LOOPING PLUGINS ===
    for (const plugin of Object.values(conn.plugins)) {
