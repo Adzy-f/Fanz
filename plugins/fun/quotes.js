@@ -7,7 +7,7 @@ export default {
     run: async (conn, m, { Func }) => {
         let tersedia = `Daftar quotes yg tersedia adalah\n\n+= senja 🌇 \n+= galau 😔\n+= renungan 🙄`
         if (!m.text) return m.reply(tersedia)
-        let q = m.args[0] ? m.args[0].toLowerCase : null
+        let q = m.args[0] ? m.args[0].toLowerCase() : null
 
         // kondisi semja
         if (q === "senja") {
