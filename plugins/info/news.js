@@ -1,5 +1,5 @@
 export default {
-   nama: "news",
+   name: "news",
    category: "info",
    command: ["news"],
    run: async (conn, m, {
