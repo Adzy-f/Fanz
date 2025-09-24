@@ -10,6 +10,7 @@ export default {
          if (quoted.msg?.seconds > 10) {
             return m.reply("tidak boleh lebih dari 10 detik");
          }
+         let text = m.text
          let [packname, ...author] = (text || '').split('|');
         author = (author || []).join('|');
          conn.sendSticker(m.chat, media, m, {
