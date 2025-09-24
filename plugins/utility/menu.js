@@ -38,7 +38,7 @@ export default {
          menu += '\nKetik *.menu <kategori>* untuk menampilkan menu\n';
          menu += 'Ketik *.menu all* untuk semua menu\n';
       } else if (behh === "all") {
-         menu += `Hai kak ${m.pushname} ini "Allmenu":\n\n`
+         menu += `Hai kak ${m.pushname} ini "Allmenu": total menu ada ${Object.keys(conn.plugins).length} plugins\n\n`
          for (let [category, items] of Object.entries(grouped)) {
             menu += `╭───「 ${category.toUpperCase() || "UNDEFINED"} 」───╮\n`;
             for (let item of items) {
