@@ -9,31 +9,10 @@ Recode: Adzy-f
 
 —–—–—–—–—–—–—–—–—–—–—–—–—–—–
 
-Fanz bot 1.3.81(beta)
+Fanz bot 1.4.0
 
 —–—–—–—–—–—–—–—–—–—–—–—–—–—–
 
-[ + ] Menambahkan
-1. status = yg dimana fitur ini memungkinkan owner untuk membuat bot jadi self atau public 
-2. quotes = menambahkan fitur quotes yg terdiri dari ["senja", "renungan", "galau"]
-3. quo.js = Ini adalah anu ee anu ah susah jelasin nya ah🗿😂 🖐️😁🤚
-
-[ ! ] Memperbarui file
-Syaa memperbarui file di bawah ini
-> ./Fanz/plugin
-   code.js
-   wm.js
-   hapus.js
-   toqr.js
-> ./Fanz
-   config.js
-   handler.js
-   package.json
-[ ! ] sedikit pembaruan menu.js eheh
-[ ! ] index.js ( memperbaiki tidak merespon di private chat )
-[ - ] Saya menghapus file readme.lua dan mengganti nya dengan readme.log
-[ + ] Saya juga menambahkan readme.log yg akan memberi tahu perubahan apa aja sih yg anu
-[ ! ] Mengubah command eval dan exec (e/ev = eval, x = exec)
-[ ! ] Memperbarui serialise dan function
-
-@@ Oke dah segitu aja yah capek ngetik ngantuk pula oke dah ya byyy
+[ + ] Menambahkan fitur ai
+[ + ] Menambahkan fitur hidetag
+[ ! ] sedikit perubahan pada beberapa file
