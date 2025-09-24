@@ -93,7 +93,7 @@ export default async function Command(conn, m) {
       }
    };
 
-   if (["e", "ev"].some(a => m.body?.toLowerCase().startsWith(a)) && isOwner) {
+   if ([">", "=>"].some(a => m.body?.toLowerCase().startsWith(a)) && isOwner) {
       let evalCmd = ""
       try {
          evalCmd = /await/i.test(m.text) ?
@@ -113,7 +113,7 @@ export default async function Command(conn, m) {
          ?.catch((err) => m.reply(util.format(err)))
    }
 
-   if (m.body?.startsWith('x') && isOwner) {
+   if (m.body?.startsWith('$') && isOwner) {
       const exec = util.promisify(cp.exec).bind(cp)
       let o
       try {
