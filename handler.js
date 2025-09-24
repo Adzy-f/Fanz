@@ -79,6 +79,10 @@ export default async function Command(conn, m) {
                   m.reply(bruh.wait);
                   continue;
                }
+               // if (plugin.settings?.loading && !m.text) {
+                  // m.reply(bruh.text);
+                  // continue;
+               // }
 
                plugin.run(conn, m, anunya);
             }

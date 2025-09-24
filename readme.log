@@ -9,9 +9,11 @@ Recode: Adzy-f
 
 —–—–—–—–—–—–—–—–—–—–—–—–—–—–
 
-Fanz bot 1.4.1
+Fanz bot 1.4.1-rfx.3
 
 —–—–—–—–—–—–—–—–—–—–—–—–—–—–
 
-[ ! ] beberapa perbaikan 
-[ + ] Menambahkan fitur dan apikey
+[+] Menambahkan fitur info/**
+[+] Menambahkan fitur ai/luminai
+[+] perubahan pada api.js dan handler.js
+
