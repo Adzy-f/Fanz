@@ -76,7 +76,7 @@ export default async function Command(conn, m) {
                   continue;
                }
                if (plugin.settings?.loading && !isBotAdmin) {
-                  m.reply(bruh.loading);
+                  m.reply(bruh.wait);
                   continue;
                }
 
