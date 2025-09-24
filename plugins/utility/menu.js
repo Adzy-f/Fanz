@@ -21,6 +21,7 @@ export default {
       let intro = `╭───「 INTFO 」───╮
 > Name : ${c.botN}
 > Version : ${c.version}
+> runtime : ${Func.runtime(process.uptime())}
 > User : ${m.pushname}
 > Tag : @${m.sender.split('@')[0]}
 ╰───────────────────────╯`;
@@ -44,7 +45,7 @@ export default {
             }
             menu += `╰───────────────────────╯\n\n`;
          }
-         menu += "\n\n<!> Powered by Dzyy";
+         menu += `\n\n${bruh.wm}`;
       } else if (grouped[behh]) {
          menu += `Halo kak ${m.pushname} 👋 ini adalah "${behh}" menu\n\n`
          menu += `╭───「 ${behh.toUpperCase()} 」───╮\n`;
@@ -52,7 +53,7 @@ export default {
             menu += `> ${m.prefix}${item.name || "Undefined"}\n`;
          }
          menu += `╰───────────────────────╯\n\n`;
-         menu += "<!> Powered By Dzyy";
+         menu += `${bruh.wm}`;
       } else if (mek === c.botF) {
          return m.reply("Saya online kak!..")
       } else {
