@@ -7,13 +7,14 @@ export default {
     botN: "Fanz-bot",
     botF: "Fnz",
     version: pkg.version,
-    pack: "Fanzbot",
-    auth: "by adi",
+    pack: "Sticker by Fanz",
+    auth: "Auhtor nya Adi",
     wait: 'Harap Tunggu sebentar',
     owner: 'Fitur Ini Khusus Owner',
     group: 'Fitur Ini Khusus Group',
     admin: 'Fitur Ini Khusus Admin Group',
     botAdmin: 'Bot Harus Menjadi Admin Group',
     private: 'Fitur Ini Khusus Private',
-    pairC: "ADZYSADD"
+    pairC: "FANZXSAD",
+    wm: "<!> Powered by Dzyy"
 }
