@@ -3,9 +3,9 @@ FanzCode();
 **/
 
 export default {
-   name: "ytmp3",
+   name: "ytmp4",
    category: "downloader",
-   command: ["ytmp3", "yta"],
+   command: ["ytmp4", "ytv"],
    run: async (conn, m, {
       Api,
       bruh
@@ -13,8 +13,8 @@ export default {
       if (!m.text) return m.reply("Masukin url")
       await m.reply("Sabar yaa")
 
-      let api = await Api.request("ryhar", "/api/downloader/youtube-audio", {
-         url: m.text,
+      let api = await Api.request("ryhar", "/api/downloader/youtube-video", {
+         url: "https://youtube.com/watch?v=VxilLXXR2i8",
          apikey: bruh.ryhar
       })
       let result = api.result;
@@ -25,10 +25,10 @@ export default {
          caption: `Yt video di temukan:\n> Judul: ${result.title}\n> Desk: ${result.description}\n> *Status: mendownload video*`
       })
       m.reply({
-         audio: {
+         video: {
             url: result.link
          },
-         mimetype: "audio/mpeg"
+         caption: "Done terdownload puh"
       })
    }
 }
