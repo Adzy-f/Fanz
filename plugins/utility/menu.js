@@ -29,32 +29,43 @@ export default {
       // menu
       let menu = "";
       if (!behh) {
-         menu += `Hai 👋 ${m.pushname} ini daftar menu yg tersedia:\n${intro}\n\n`;
-         menu += '╭───「 CATEGORY 」───╮\n';
+         menu += `╭─❖「  Hai ${m.pushname} 👋 」\n`
+         menu += `│  Berikut daftar kategori menu:\n`
+         menu += `╰───────────────❖\n\n`
          for (let category of Object.keys(grouped)) {
-            menu += `> ${category || "Undefined"}\n`;
+            menu += `⟡ ${category || "Undefined"}\n`
          }
-         menu += `╰───────────────────────╯`;
-         menu += '\nKetik *.menu <kategori>* untuk menampilkan menu\n';
-         menu += 'Ketik *.menu all* untuk semua menu\n';
+         menu += `\n╭───────────────❖\n`
+         menu += `│  Ketik *.menu <kategori>*\n`
+         menu += `│  Ketik *.menu all* untuk semua\n`
+         menu += `╰───────────────❖\n`
       } else if (behh === "all") {
-         menu += `Hai kak ${m.pushname} ini "Allmenu": total menu ada ${Object.keys(conn.plugins).length} plugins\n\n`
+         menu += `╭─❖「  Halo ${m.pushname} 👋 」\n`
+         menu += `│  Berikut *ALLMENU* ✨\n`
+         menu += `│  Total: ${Object.keys(conn.plugins).length} plugins\n`
+         menu += `╰───────────────❖\n\n`
+
          for (let [category, items] of Object.entries(grouped)) {
-            menu += `╭───「 ${category.toUpperCase() || "UNDEFINED"} 」───╮\n`;
+            menu += `╭─「 ${category.toUpperCase() || "UNDEFINED"} 」\n`
             for (let item of items) {
-               menu += `> ${m.prefix}${item.name || "Undefined"}\n`;
+               menu += `│ ⟡ ${m.prefix}${item.name || "Undefined"}\n`
             }
-            menu += `╰───────────────────────╯\n\n`;
+            menu += `╰───────────────❖\n\n`
          }
-         menu += `\n\n${bruh.wm}`;
+
+         menu += `\n───「 ${bruh.wm} 」───\n`
       } else if (grouped[behh]) {
-         menu += `Halo kak ${m.pushname} 👋 ini adalah "${behh}" menu\n\n`
-         menu += `╭───「 ${behh.toUpperCase()} 」───╮\n`;
+         menu += `╭─❖「  Halo ${m.pushname} 👋  」\n`
+         menu += `│  Ini adalah menu *${behh.toUpperCase()}*\n`
+         menu += `╰───────────────❖\n\n`
+
          for (let item of grouped[behh]) {
-            menu += `> ${m.prefix}${item.name || "Undefined"}\n`;
+            menu += `⟡ ${m.prefix}${item.name || "Undefined"}\n`
          }
-         menu += `╰───────────────────────╯\n\n`;
-         menu += `${bruh.wm}`;
+
+         menu += `\n╭───────────────❖\n`
+         menu += `│  Gunakan perintah di atas ✨\n`
+         menu += `╰───────────────❖\n\n`
       } else if (mek === c.botF) {
          return m.reply("Saya online kak!..")
       } else {
