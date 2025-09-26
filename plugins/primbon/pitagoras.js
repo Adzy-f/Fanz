@@ -8,7 +8,7 @@ export default {
    }) => {
       if (!m.text) return m.reply("📌 Format: tgl|bln|thn\n> contoh: 29|04|2008");
 
-      let tai = await m.reply("⏳ Menganalisa...");
+      await m.reply("⏳ Menganalisa...");
       let txt = m.text.split("|").map(t => t.trim());
 
       if (txt.length < 3) {
@@ -39,6 +39,6 @@ export default {
          `📊 *Analisa:*\n${analisa}\n\n` +
          `📝 *Catatan:*\n${notes}`;
 
-      m.edit(hasil, tai.key);
+      m.reply(hasil);
    }
 }
