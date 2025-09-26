@@ -14,7 +14,7 @@ export default {
       await m.reply("Sabar yaa")
 
       let api = await Api.request("ryhar", "/api/downloader/youtube-video", {
-         url: "https://youtube.com/watch?v=VxilLXXR2i8",
+         url: m.text,
          apikey: bruh.ryhar
       })
       let result = api.result;
@@ -22,7 +22,7 @@ export default {
          image: {
             url: result.thumbnail
          },
-         caption: `Yt video di temukan:\n> Judul: ${result.title}\n> Desk: ${result.description}\n> *Status: mendownload video*`
+         caption: `Yt video di temukan:\n> Video ini di upload pada *${result.uploadDate} dengan view: ${result.views} | ${result.likes} like*\n> Judul: ${result.title}\n> Desk: ${result.description}\n> *Status: mendownload video*`
       })
       m.reply({
          video: {
