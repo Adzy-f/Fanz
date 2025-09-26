@@ -9,7 +9,7 @@ export default {
       if (!m.text) {
          return m.reply("Ex .setname <query>\n> .setname SyntaxError: kont*l")
       }
-      await conn.updateProfileName(input)
+      await conn.updateProfileName(m.text)
       m.reply("Done")
    }
 }
