@@ -10,7 +10,7 @@ export default {
          let api = await Api.request("siput", "/api/primbon/artinama", {
             nama: m.text
          })
-         let exec = api.data; || "Data tidak temukan: Error"
+         let exec = api.data || "Data tidak temukan: Error";
          let send = `Nama: ${exec.nama}\n> Arti: ${exec.arti}\n\n> Catatan: ${exec.catatan}`
          m.reply(send)
       } else {
