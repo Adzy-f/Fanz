@@ -13,6 +13,7 @@ export default {
          return m.reply("Ex .yts <query>")
          await m.react(m.chat, "😁")
       }
+      await m.reply("Oke bang lagi mencari bang")
       let apis = await Api.request("siput", "/api/s/youtube", {
          query: m.text
       })
@@ -23,13 +24,16 @@ export default {
 
       let text = "Ini hasil yang di dapat bang!\n\n\n"
       data.forEach((pck, i) => {
-         text += `*#${i+1}*\n`
-         text += `> Tipe: ${pck.type}\n`
-         text += `📝 Judul: ${pck.title}\n`
-         text += `💻 Link: ${pck.url}\n`
-         text += `⏰ Durasi: ${pck.timestamp || "Null ges"}\n`
-         text += "—–—–—–—–—–—–—–—–—\n"
-         //text += `🗿 Author: ${pck.author.name}\n> Url: ${pck.author.url}`
+         if (pck.type === 'video') {
+            text += `*#${i+1}*\n`
+            // text += `> Tipe: ${pck.type}\n`
+            text += `📝 Judul: ${pck.title}\n`
+            text += `💻 Link: ${pck.url}\n`
+            text += `⏰ Durasi: ${pck.timestamp || "Null ges"}\n`
+            text += "—–—–—–—–—–—–—–—–—\n"
+         } else {
+            return
+         }
       })
 
       m.reply(text)
