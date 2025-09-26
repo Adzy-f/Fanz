@@ -19,7 +19,7 @@ export default {
          nama2: teks2
       })
       let api = key.data;
-      let info = `[ Cek ke cocokan Pasangan ]\n\n*Info pasangan*\n> Nama 1: ${api.nama_anda}\n> Nama 2: ${api.nama_pasangan}`
+      let info = `[ Cek ke cocokan Pasangan ]\n\n*Info pasangan*\n> Nama 1: ${teks1}\n> Nama 2: ${teks2}`
       info += `\n\n*Result*\n`
       info += `> Sisi positif: \n${api.sisi_positif}\n`
       info += `> Sisi negatif: \n${api.sisi_negatif}\n\n`
