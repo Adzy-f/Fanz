@@ -3,7 +3,7 @@ export default {
    category: "utility",
    command: ["menu", "start"],
    run: async (conn, m, {
-      bruh,
+      cfg,
       Func
    }) => {
 
@@ -18,10 +18,10 @@ export default {
 
       let behh = m.args[0] ? m.args[0].toLowerCase() : null
       let mek = m.text;
-      let c = bruh;
+      let c = cfg;
       let intro = `╭───「 INTFO 」───╮
-> Name : ${c.botN}
-> Version : ${c.version}
+> Name : ${c.set.botN}
+> Version : ${c.set.version}
 > runtime : ${Func.runtime(process.uptime())}
 > User : ${m.pushname}
 > Tag : @${m.sender.split('@')[0]}
@@ -53,7 +53,7 @@ export default {
             menu += `╰───────────────❖\n\n`
          }
 
-         menu += `\n───「 ${bruh.wm} 」───\n`
+         menu += `\n───「 ${c.set.wm} 」───\n`
       } else if (grouped[behh]) {
          menu += `╭─❖「  Halo ${m.pushname} 👋  」\n`
          menu += `│  Ini adalah menu *${behh.toUpperCase()}*\n`
@@ -66,7 +66,7 @@ export default {
          menu += `\n╭───────────────❖\n`
          menu += `│  Gunakan perintah di atas ✨\n`
          menu += `╰───────────────❖\n\n`
-      } else if (mek === c.botF) {
+      } else if (mek === c.set.botF) {
          return m.reply("Saya online kak!..")
       } else {
          return m.reply("Apaan itu bang ga tersedia di kategori 😅")
