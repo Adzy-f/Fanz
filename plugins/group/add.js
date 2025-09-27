@@ -31,10 +31,12 @@ export default {
                     inviteCode,
                     inviteExp,
                     metadata.subject,
-                    'Undangan untuk bergabung ke grup WhatsApp saya',
+                    'Kami mengundang kamu untuk bergabung ke grup ini',
                     jpegThumbnail
                 );
             }
         };
     }
 }
+
+// Undangan untuk bergabung ke grup WhatsApp saya
