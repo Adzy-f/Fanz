@@ -8,7 +8,7 @@ export default {
    },
    run: async (conn, m) => {
       let tulis = `/**
-FanzCode();
+FanzCode("${m.text}");
 **/
 
   export default {
