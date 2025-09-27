@@ -1,0 +1,29 @@
+{
+   "set": {
+      "numP": 962796121703,
+      "ownerN": [
+         "962796171203"
+      ],
+      "status": false,
+      "botN": "Fanz-bot",
+      "botF": "fnz",
+      "version": "1.4.7-f.3",
+      "thumb": "https://files.catbox.moe/hiob0j.jpg",
+      "url": "https://github.com/Adzy-f",
+      "wm": "[#] Fanz WhatsApp Bot"
+   },
+   "mess": {
+      "wait": "+= Harap Tunggu sebentar",
+      "owner": "+= Fitur Ini Khusus Owner",
+      "group": "+= Fitur Ini Khusus Group",
+      "admin": "+= Fitur Ini Khusus Admin Group",
+      "botAdmin": "+= Bot Harus Menjadi Admin Group",
+      "private": "+= Fitur Ini Khusus Private"
+   },
+   "pck": {
+      "name": "Sticker by Fanz",
+      "author": "Auhtor nya Adi"
+   },
+   "pairC": "FANZCODE",
+   "ryhar": "y7r35v1jrzh4z9myfsj2ut"
+}

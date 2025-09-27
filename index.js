@@ -1,5 +1,3 @@
-import bruh from './config.js';
-
 import makeWASocket, {
    Browsers,
    DisconnectReason,
@@ -19,6 +17,7 @@ import serialize, {
 } from './lib/serialize.js';
 
 const loader = new PluginsLoad('./plugins');
+const cfg = JSON.parse(fs.readFileSync("./config.json", "utf-8"));
 
 async function startWA() {
    const {
@@ -52,7 +51,7 @@ async function startWA() {
    if (!conn.authState.creds.registered) {
       setTimeout(async () => {
          try {
-            const code = await conn.requestPairingCode(bruh.numP, bruh.pairC);
+            const code = await conn.requestPairingCode(cfg.set.numP, cfg.pairC);
             console.log(color.green(`Kode Pairing: ${code}`))
          } catch (err) {
             console.log(color.red('[+] Gagal mengambil pairing code:'), err)

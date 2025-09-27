@@ -1,42 +1,42 @@
 {
-  "name": "Fanz-bot",
-  "nickname": "Fanz",
-  "version": "1.4.7-f.3",
-  "description": "menggunakan base AgusXzz",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Adzy-f/Fanz.git"
-  },
-  "imports": {
-    "#lib/*": "./lib/*"
-  },
-  "author": "Adzy",
-  "bugs": {
-    "url": "https://github.com/Adzy-f/Fanz/issues"
-  },
-  "homepage": "https://github.com/Adzy-f/Fanz#readme",
-  "license": "ISC",
-  "keywords": [
-    "termux-whatsapp-bot",
-    "whatsapp-bot",
-    "whatsapp",
-    "js-whatsapp",
-    "whatsapp",
-    "multi-device",
-    "MD",
-    "baileys-md"
-  ],
-  "dependencies": {
-    "baileys": "latest",
-    "cheerio": "^1.1.2",
-    "chokidar": "^4.0.3",
-    "file-type": "^17.1.1",
-    "fluent-ffmpeg": "^2.1.3",
-    "node-webpmux": "^3.2.1"
-  }
+   "name": "Fanz-bot",
+   "version": "1.4.7-f.3",
+   "description": "WhatsApp bot simple by Adzy",
+   "base": "github:AgusXzz/ESEMPE-MD",
+   "main": "index.js",
+   "type": "module",
+   "scripts": {
+      "start": "node index.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Adzy-f/Fanz.git"
+   },
+   "imports": {
+      "#lib/*": "./lib/*"
+   },
+   "author": "Adzy",
+   "bugs": {
+      "url": "https://github.com/Adzy-f/Fanz/issues"
+   },
+   "homepage": "https://github.com/Adzy-f/Fanz#readme",
+   "license": "ISC",
+   "keywords": [
+      "termux-whatsapp-bot",
+      "whatsapp-bot",
+      "whatsapp",
+      "js-whatsapp",
+      "whatsapp",
+      "multi-device",
+      "MD",
+      "baileys-md"
+   ],
+   "dependencies": {
+      "baileys": "latest",
+      "cheerio": "^1.1.2",
+      "chokidar": "^4.0.3",
+      "file-type": "^17.1.1",
+      "fluent-ffmpeg": "^2.1.3",
+      "node-webpmux": "^3.2.1"
+   }
 }

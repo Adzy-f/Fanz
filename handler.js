@@ -4,19 +4,22 @@ import {
 } from 'baileys';
 import util from 'util';
 import cp from 'child_process';
+import {
+   readFileSync
+} from 'fs';
 
 import Api from './lib/api.js';
 import Func from './lib/function.js';
-import bruh from './config.js';
+const cfg = JSON.parse(readFileSync("./config.json", "utf-8"));
 
 export default async function Command(conn, m) {
    let quoted = m.isQuoted ? m.quoted : m;
    let downloadM = async (filename) => await conn.downloadMediaMessage(quoted, filename);
    let isCommand = m.prefix && m.body.startsWith(m.prefix) || false;
-   const isOwner = m.fromMe || bruh.ownerN.includes(m.sender.split('@')[0]);
+   const isOwner = m.fromMe || cfg.set.ownerN.includes(m.sender.split('@')[0]);
 
    if (m.isBot) return;
-   if (!bruh.status && !isOwner) return;
+   if (!cfg.set.status && !isOwner) return;
    const metadata = m.isGroup ? conn.chats[m.chat] || await conn.groupMetadata(m.chat).catch(_ => null) : {}
    const groupAdmins = m.isGroup && (metadata.participants.reduce((memberAdmin, memberNow) => (memberNow.admin ? memberAdmin.push({
       jid: memberNow.id?.endsWith('@s.whatsapp.net') ? memberNow.id : (memberNow.jid?.endsWith('@s.whatsapp.net') ? memberNow.jid : memberNow.phoneNumber),
@@ -34,7 +37,7 @@ export default async function Command(conn, m) {
       isOwner,
       isAdmin,
       isBotAdmin,
-      bruh
+      cfg
    }
    // === LOOPING PLUGINS ===
    for (const plugin of Object.values(conn.plugins)) {
@@ -56,32 +59,28 @@ export default async function Command(conn, m) {
          try {
             if (isCmd) {
                if (plugin.settings?.owner && !isOwner) {
-                  m.reply(bruh.owner);
+                  m.reply(cfg.mess.owner);
                   continue;
                }
                if (plugin.settings?.private && m.isGroup) {
-                  m.reply(bruh.private);
+                  m.reply(cfg.mess.private);
                   continue;
                }
                if (plugin.settings?.group && !m.isGroup) {
-                  m.reply(bruh.group);
+                  m.reply(cfg.mess.group);
                   continue;
                }
                if (plugin.settings?.admin && !isAdmin) {
-                  m.reply(bruh.admin);
+                  m.reply(cfg.mess.admin);
                   continue;
                }
                if (plugin.settings?.botAdmin && !isBotAdmin) {
-                  m.reply(bruh.botAdmin);
+                  m.reply(cfg.mess.botAdmin);
                   continue;
                }
                if (plugin.settings?.loading) {
-                  m.reply(bruh.wait);
+                  m.reply(cfg.mess.wait);
                }
-               // if (plugin.settings?.loading && !m.text) {
-                  // m.reply(bruh.text);
-                  // continue;
-               // }
 
                plugin.run(conn, m, anunya);
             }

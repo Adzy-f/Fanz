@@ -12,5 +12,8 @@ Recode: Adzy-f
 Fanz bot 1.4.7-f.3
 
 —–—–—–—–—–—–—–—–—–—–—–—–—–—–
-[$] Config, package, serialize sudah di perbarui 
-[#] m.reply() di perbarui 
+[#] memperbaiki plugin mahiai, luminai, artinama, setnama
+[#] beberapa perbaikan lain
+[#] Ssweb juga di fix
+[#] pokoknya full perbaikan san update baru
+[+] menambahkan config.json untuk menggantikan config.js 
