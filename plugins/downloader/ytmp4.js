@@ -8,14 +8,14 @@ export default {
    command: ["ytmp4", "ytv"],
    run: async (conn, m, {
       Api,
-      bruh
+      cfg
    }) => {
       if (!m.text) return m.reply("Masukin url")
       await m.reply("Sabar yaa")
 
       let api = await Api.request("ryhar", "/api/downloader/youtube-video", {
          url: m.text,
-         apikey: bruh.ryhar
+         apikey: cfg.ryhar
       })
       let result = api.result;
       await m.reply({
