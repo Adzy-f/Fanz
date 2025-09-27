@@ -2,6 +2,9 @@ export default {
    name: "jadwalsholat",
    category: "info",
    command: ["jadwalsholat", "jdwsholat"],
+   settings: {
+      loading: true
+   },
    run: async (conn, m, {
       Func
    }) => {

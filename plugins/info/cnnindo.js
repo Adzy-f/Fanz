@@ -6,11 +6,12 @@ export default {
    name: "cnn",
    category: "berita",
    command: ["cnn"],
+   settings: {
+      loading: true
+   },
    run: async (conn, m, {
       Func,
-      bruh
    }) => {
-      await m.reply(bruh.wait);
       try {
          let api = await Func.fetchJson("https://api-furina.vercel.app/berita/cnnindonesia")
          let res = api.results;

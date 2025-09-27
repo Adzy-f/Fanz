@@ -2,6 +2,9 @@ export default {
    name: "jadwaltv",
    category: "info",
    command: ["jadwaltv"],
+   settings: {
+      loading: true
+   },
    run: async (conn, m, {
       Api
    }) => {
