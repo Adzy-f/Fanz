@@ -12,7 +12,7 @@ export default {
       let txt = m.text.split("|").map(t => t.trim());
 
       if (txt.length < 3) {
-         return m.edit("⚠️ Gagal menganalisa\nGunakan format yg benar:\n> 29|04|2008", tai.key);
+         return m.reply("⚠️ Gagal menganalisa\nGunakan format yg benar:\n> 29|04|2008");
       }
 
       let apis;
@@ -24,11 +24,11 @@ export default {
          });
       } catch (e) {
          console.error(e);
-         return m.edit("❌ Terjadi error saat menghubungi API", tai.key);
+         return m.reply("❌ Terjadi error saat menghubungi API");
       }
 
       if (!apis || !apis.data) {
-         return m.edit("⚠️ Data tidak tersedia atau API error", tai.key);
+         return m.reply("⚠️ Data tidak tersedia atau API error");
       }
 
       let analisa = apis.data.analisa || "Tidak ada hasil";
