@@ -1,5 +1,5 @@
 export default {
-   nama: "mahiai",
+   name: "mahiai",
    category: "ai",
    command: ["mahiai"],
    run: async (conn, m, {

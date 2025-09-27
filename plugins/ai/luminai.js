@@ -1,6 +1,6 @@
 // pixed by ai
 export default {
-   nama: "luminai",
+   name: "luminai",
    category: "ai",
    command: ["luminai"],
    run: async (conn, m, { Api, quoted }) => {
