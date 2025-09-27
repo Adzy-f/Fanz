@@ -8,8 +8,14 @@ Plugin created: Purrbits
 Recode: Adzy-f
 
 —–—–—–—–—–—–—–—–—–—–—–—–—–—–
+Cara menjalankan Fanzbot 
+$ git clone https://github.com/Adzy-f/Fanz
+$ cd Fanz
+$ npm i
+$ npm start
+—–—–—–—–—–—–—–—–—–—–—–—–—–—–
 
-Fanz bot 1.4.7-f.3
+Fanz bot 1.4.8 
 
 —–—–—–—–—–—–—–—–—–—–—–—–—–—–
 [#] memperbaiki plugin mahiai, luminai, artinama, setnama
@@ -17,3 +23,6 @@ Fanz bot 1.4.7-f.3
 [#] Ssweb juga di fix
 [#] pokoknya full perbaikan san update baru
 [+] menambahkan config.json untuk menggantikan config.js 
+
+[+] Dua fitur baru 
+[i] up to version 1.4.8 (official)

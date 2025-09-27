@@ -1,6 +1,6 @@
 {
    "name": "Fanz-bot",
-   "version": "1.4.7-f.3",
+   "version": "1.4.8",
    "description": "WhatsApp bot simple by Adzy",
    "base": "github:AgusXzz/ESEMPE-MD",
    "main": "index.js",
