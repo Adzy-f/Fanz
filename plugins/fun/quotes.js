@@ -1,4 +1,4 @@
-import(`../../lib/quo.js`);
+import(`#lib/quo.js`);
 
 export default {
    name: "quotes",
