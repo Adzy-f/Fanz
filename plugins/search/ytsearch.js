@@ -14,29 +14,30 @@ export default {
          await m.react(m.chat, "😁")
       }
       await m.reply("Oke bang lagi mencari bang")
-      let apis = await Api.request("siput", "/api/s/youtube", {
-         query: m.text
+      let apis = await Api.request("furina", "/search/youtube", {
+         q: m.text
       })
-      if (!apis.data || apis.data.length === 0) {
+      if (!apis.result || apis.result.length === 0) {
          return m.reply("Pencarian gak di temukan jir")
       }
-      let data = apis.data;
-
+      let data = apis.result;
+      let img = apis.result[0].imageUrl
       let text = "Ini hasil yang di dapat bang!\n\n\n"
-      data.forEach((pck, i) => {
-         if (pck.type === 'video') {
-            text += `*#${i+1}*\n`
-            // text += `> Tipe: ${pck.type}\n`
-            text += `📝 Judul: ${pck.title}\n`
-            text += `💻 Link: ${pck.url}\n`
-            text += `⏰ Durasi: ${pck.timestamp || "Null ges"}\n`
-            text += "—–—–—–—–—–—–—–—–—\n"
-         } else {
-            return
-         }
+      text += "—–—–—–—–—–—–—–—–—\n"
+      data.forEach((p, i) => {
+         text += `*#${i+1}*\n`
+         text += `📝 Judul: ${p.title}\n`
+         text += `💻 Channel: ${p.channel}\n`
+         text += `⏰ Durasi: ${p.link}\n`
+         text += "—–—–—–—–—–—–—–—–—\n"
       })
 
-      m.reply(text)
+      m.reply({
+         image: {
+            url: img
+         },
+         caption: text
+      })
 
    }
 }
