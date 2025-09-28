@@ -12,7 +12,7 @@ import serialize, { Client } from '#lib/serialize.js'
 import log from '#lib/logger.js'
 import printMessage from "#lib/printChatLog.js"
 import PluginsLoad from '#lib/loadPlugins.js'
-const cfg = JSON.parse(readFileSync("./config.json", "utf-8"));
+const cfg = JSON.parse(fs.readFileSync("./config.json", "utf-8"));
 
 const loader = new PluginsLoad('./plugins', { debug: true })
 await loader.load()
